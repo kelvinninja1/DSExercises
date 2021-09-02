@@ -47,14 +47,7 @@ public class TriangleMaxPathSum
         int foldIndex = 0;
 
         for(int a = 1; a < triangle.length; a++ ) {
-
-            if (triangle[a][foldIndex] > triangle[a][foldIndex + 1]) {
-                sum += triangle[a][foldIndex];
-
-            } else {
-                sum += triangle[a][foldIndex + 1];
-                foldIndex = foldIndex + 1;
-            }           
+            sum += (triangle[a][foldIndex] > triangle[a][foldIndex + 1]) ? triangle[a][foldIndex] : triangle[a][++foldIndex] ; 
         }
         
         return sum;
