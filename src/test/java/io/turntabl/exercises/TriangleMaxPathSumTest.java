@@ -18,12 +18,6 @@ import DSunit.DS;
  
 public class TriangleMaxPathSumTest
 {
-    // int triangle[][] = { 
-    //                     { 3 },
-    //                     { 7, 4 },
-    //                     { 2, 4, 6 },
-    //                     { 8, 5, 9, 3 }
-    //                 };
      
     public static void main(String[] args) {
         int triangle2[][] = {{3}, {5, 4},  {2, 1, 6}};
@@ -52,14 +46,9 @@ public class TriangleMaxPathSumTest
                     };
         int expected = 75 + 95 + 47 + 87 + 82 + 75 + 73 + 28 + 83 + 47 + 43 + 73 + 91 + 67 + 98;
 
-        // TriangleMaxPathSum test = new TriangleMaxPathSum();
-
-
         DS.assertEquals(TriangleMaxPathSum.findMaxPath(triangle1), expected1, "Example: Find Max Path of a triangle");
         DS.assertEquals(TriangleMaxPathSum.findMaxPath(triangle2), expected2, "Example: Find Max Path of a triangle");
         DS.assertEquals(TriangleMaxPathSum.findMaxPath(triangle2b), expected2, "Example: Find Max Path of a triangle");
         DS.assertEquals(TriangleMaxPathSum.findMaxPath(triangle), expected, "Find Max Path of a triangle");
-        // DS.assertEquals(TriangleMaxPathSum.findMaxPathFromBottom(triangle), 3 + 7 + 4 + 9, "Find Max Path of a triangle From Buttom");
-        // DS.assertEquals(TriangleMaxPathSum.findMaxPathStatically(triangle), 3 + 7 + 4 + 9, "Find Max Path of a triangle Example");
     }
 }
