@@ -26,13 +26,20 @@ public class TriangleMaxPathSumTest
     //                 };
      
     public static void main(String[] args) {
+        int triangle2[][] = {{3}, {5, 4},  {2, 1, 6}};
+        int triangle2b[][] = {{3}, {5, 4},  {1, 2, 6}};
+        int expected2 =  3 + 5 + 2;
 
-        int triangle[][] = { { 3 },{ 7, 4 },{ 2, 4, 6 },{ 8, 5, 9, 3 }};
+        int triangle1[][] = { { 3 },{ 7, 4 },{ 2, 4, 6 },{ 8, 5, 9, 3 }};
+        int expected1 =  3 + 7 + 4 + 9;
 
         // TriangleMaxPathSum test = new TriangleMaxPathSum();
 
 
-        DS.assertEquals(TriangleMaxPathSum.findMaxPath(triangle), 3 + 7 + 4 + 9, "Find Max Path of a triangle");
-        DS.assertEquals(TriangleMaxPathSum.findMaxPathFromBottom(triangle), 3 + 7 + 4 + 9, "Find Max Path of a triangle");
+        DS.assertEquals(TriangleMaxPathSum.findMaxPath(triangle1), expected1, "Find Max Path of a triangle");
+        DS.assertEquals(TriangleMaxPathSum.findMaxPath(triangle2), expected2, "Find Max Path of a triangle");
+        DS.assertEquals(TriangleMaxPathSum.findMaxPath(triangle2b), expected2, "Find Max Path of a triangle");
+        // DS.assertEquals(TriangleMaxPathSum.findMaxPathFromBottom(triangle), 3 + 7 + 4 + 9, "Find Max Path of a triangle From Buttom");
+        // DS.assertEquals(TriangleMaxPathSum.findMaxPathStatically(triangle), 3 + 7 + 4 + 9, "Find Max Path of a triangle Example");
     }
 }
