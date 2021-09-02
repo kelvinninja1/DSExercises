@@ -24,7 +24,7 @@ public class DS
 
     private static int testPassed(String feedback)
     { 
-        System.out.println(ANSI_GREEN_BACKGROUND + ANSI_WHITE + " TEST  PASSED: " + feedback + "  " + ANSI_RESET);
+        System.out.println(ANSI_GREEN_BACKGROUND + ANSI_WHITE + " TEST PASSED: " + feedback + "  " + ANSI_RESET);
         return 1;
     }
 
