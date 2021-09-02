@@ -23,7 +23,7 @@ public class TriangleMaxPathSum
         int foldIndex = 0; //fold index
 
         for(int a = 1; a < triangle.length; a++ ) {
-            System.out.println(" First Child is: " + triangle[a][a-1] + ", Second Child is: " + triangle[a][a]);
+            System.out.println(" First Child is: " + triangle[a][foldIndex] + ", Second Child is: " + triangle[a][foldIndex + 1]);
             // int start = (triangle[a][a-1] > -1) ? a-1 : a ;
             if (triangle[a][foldIndex] > triangle[a][foldIndex + 1]) {
                 sum += triangle[a][foldIndex];
@@ -31,7 +31,7 @@ public class TriangleMaxPathSum
                 // foldIndex = foldIndex;
 
             } else {
-                sum += triangle[a][a];
+                sum += triangle[a][foldIndex + 1];
                 System.out.println(" Chosen Second Child is: " + triangle[a][foldIndex + 1]);
                 foldIndex = foldIndex + 1;
             }
@@ -66,6 +66,32 @@ public class TriangleMaxPathSum
         return sum;
     }
      
+    public static int findMaxPathStatically(int triangle[][])
+    {
+        // my algo code here
+        int sum = triangle[0][0];
+        int foldIndex = 0; //fold index
+
+        for(int a = 1; a < triangle.length; a++ ) {
+            if(a == 1)
+ 
+            if (triangle[a][foldIndex] > triangle[a][foldIndex + 1]) {
+                sum += triangle[a][foldIndex];
+                System.out.println(" Chosen First Child is: " + triangle[a][foldIndex]);
+                // foldIndex = foldIndex;
+
+            } else {
+                sum += triangle[a][a];
+                System.out.println(" Chosen Second Child is: " + triangle[a][foldIndex + 1]);
+                foldIndex = foldIndex + 1;
+            }
+            
+        }
+        
+        return sum;
+    }
+     
+
 
     public static void main (String[] args)
     {
