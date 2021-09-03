@@ -1,0 +1,33 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Debug (Launch) - Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-TriangleMaxPathSum<DSExercises_6f3ef26f>",
+      "request": "launch",
+      "mainClass": "src.main.java.io.turntabl.exercises.TriangleMaxPathSum",
+      "projectName": "DSExercises_6f3ef26f"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-TriangleMaxPathSumTest<DSExercises_6f3ef26f>",
+      "request": "launch",
+      "mainClass": "src.test.java.io.turntabl.exercises.TriangleMaxPathSumTest",
+      "projectName": "DSExercises_6f3ef26f"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-TriangleMaxPathSum",
+      "request": "launch",
+      "mainClass": "io.turntabl.TriangleMaxPathSum"
+    }
+  ]
+}

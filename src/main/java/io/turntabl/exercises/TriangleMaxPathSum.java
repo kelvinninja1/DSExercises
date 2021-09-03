@@ -1,5 +1,7 @@
 package src.main.java.io.turntabl.exercises;
 
+import java.util.Arrays;
+
 // Think about what data structures out list/array, map/dictionary or set to use to represent the input data, and why. 
 
 // Maximum Path Sum
@@ -40,24 +42,76 @@ public class TriangleMaxPathSum
 {
      
     // Find the max path in triangle
-    public static int findMaxPath(int triangle[][])
-    {
+    public static int findMaxPath(final int triangle[][]) {
         // my algo code here
         int sum = triangle[0][0];
         int foldIndex = 0;
 
-        for(int a = 1; a < triangle.length; a++ ) {
-            sum += (triangle[a][foldIndex] > triangle[a][foldIndex + 1]) ? triangle[a][foldIndex] : triangle[a][++foldIndex] ; 
+        for (int a = 1; a < triangle.length; a++) {
+            sum += (triangle[a][foldIndex] > triangle[a][foldIndex + 1]) ? triangle[a][foldIndex]
+                    : triangle[a][++foldIndex];
         }
-        
-        return sum;
-    }  
 
-    public static void main (String[] args)
-    {
+        return sum;
+    }
+
+    private static int[][] initStruct ( final int triangle[][]) {
+
+        int structure[][] = new int[triangle.length][];
+
+        for (int row = 0; row < structure.length; row++) {
+            structure[row] = new int[triangle[row].length];
+            // foldIndex = 0;
+            for (int column = 0; column < structure[row].length; column++) {
+                // structure[row][column] = triangle[row][column];
+            }
+        }
+        return structure;
+
+    }
+
+    public static int bruteFindMaxPath(final int triangle[][]) {
+        // my algo code here
+        // int foldIndex = 0;
+        int triangleLength = triangle.length;
+        int res[][] = initStruct(triangle);
+
+        // res[triangle.length]
+        // foreach (rows: row){
+        // for (r = 0; r < res.length; r++>)
+        // a[row][r] = res[r]+ a[row][r]
+        // a[row][r+1] = res[r]+ a[row][r+1]
+        // }
+
+        for (int row = 0; row < triangleLength; row++) {
+
+            
+
+            int columnLength =triangle[row].length;
+            for (int column = 0; column < columnLength; column++) {
+
+                res[row][column] = (row > 0) ? res[row - 1][column] + triangle[row][column] : triangle[row][column] ;
+
+                // res[row][column] = (row > 0) ? res[row - 1][column] + triangle[row][column] : triangle[row][column] ;
+
+                // res[row][column] += triangle[row][column];
+                // res[row][column + 1] = triangle[row][column + 1];
+            }
+        }
+        // foreach(triangle[triangleLength - 1]){
+
+        // };
+
+        System.out.println(Arrays.toString(triangle[triangleLength - 1]));
+        System.out.println(Arrays.toString(res[res.length - 1]));
+
+        return triangle[triangleLength - 1][0];
+    }
+
+    public static void main(final String[] args) {
 
         // Use Test rather
-        int triangle[][] = { 
+        final int triangle[][] = { 
                         {75},
                         {95, 64},
                         {17, 47, 82},
@@ -77,7 +131,8 @@ public class TriangleMaxPathSum
 
                     // replace 9 with 09
  
-        System.out.println(findMaxPath(triangle));
+        // System.out.println(findMaxPath(triangle));
+        System.out.println(bruteFindMaxPath(triangle));
     }
 }
  
