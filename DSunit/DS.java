@@ -48,11 +48,30 @@ public class DS
         }
 
     }
-     
+    
+    public static int assertEquals(Boolean actual, Boolean expected, String message)
+    {
+
+        // my algo code here
+        // if actual.equal(expected); Ouch Primitive types
+        if (actual == expected){
+            testPassed(message + ", Expected: " + expected + " Actual: " + actual);
+            return 1;
+        } else {
+            testFailed(message + ", Expected: " + expected + " Actual: " + actual);
+            return 0;
+        }
+
+    }
+    
+
     public static void doc ()
     {
         System.out.println("DSunit - DataStructures Unit testing Docs");
     }
+
+	public static void assertEquals(Boolean palindrome, int expected, String message) {
+	}
 
 
 }
