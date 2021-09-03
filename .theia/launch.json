@@ -4,30 +4,44 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "java",
-      "name": "Debug (Launch) - Current File",
-      "request": "launch",
-      "mainClass": "${file}"
+        "type": "java",
+        "name": "CodeLens (Launch) - PalindromeStringTest",
+        "request": "launch",
+        "mainClass": "src.test.java.io.turntabl.exercises.PalindromeStringTest",
+        "projectName": "DSExercises_6f3ef26f"
     },
     {
-      "type": "java",
-      "name": "Debug (Launch)-TriangleMaxPathSum<DSExercises_6f3ef26f>",
-      "request": "launch",
-      "mainClass": "src.main.java.io.turntabl.exercises.TriangleMaxPathSum",
-      "projectName": "DSExercises_6f3ef26f"
+        "type": "java",
+        "name": "CodeLens (Launch) - PalindromeString",
+        "request": "launch",
+        "mainClass": "src.main.java.io.turntabl.exercises.PalindromeString",
+        "projectName": "DSExercises_6f3ef26f"
     },
     {
-      "type": "java",
-      "name": "Debug (Launch)-TriangleMaxPathSumTest<DSExercises_6f3ef26f>",
-      "request": "launch",
-      "mainClass": "src.test.java.io.turntabl.exercises.TriangleMaxPathSumTest",
-      "projectName": "DSExercises_6f3ef26f"
+        "type": "java",
+        "name": "Debug (Launch) - Current File",
+        "request": "launch",
+        "mainClass": "${file}"
     },
     {
-      "type": "java",
-      "name": "Debug (Launch)-TriangleMaxPathSum",
-      "request": "launch",
-      "mainClass": "io.turntabl.TriangleMaxPathSum"
+        "type": "java",
+        "name": "Debug (Launch)-TriangleMaxPathSum<DSExercises_6f3ef26f>",
+        "request": "launch",
+        "mainClass": "src.main.java.io.turntabl.exercises.TriangleMaxPathSum",
+        "projectName": "DSExercises_6f3ef26f"
+    },
+    {
+        "type": "java",
+        "name": "Debug (Launch)-TriangleMaxPathSumTest<DSExercises_6f3ef26f>",
+        "request": "launch",
+        "mainClass": "src.test.java.io.turntabl.exercises.TriangleMaxPathSumTest",
+        "projectName": "DSExercises_6f3ef26f"
+    },
+    {
+        "type": "java",
+        "name": "Debug (Launch)-TriangleMaxPathSum",
+        "request": "launch",
+        "mainClass": "io.turntabl.TriangleMaxPathSum"
     }
-  ]
+]
 }
