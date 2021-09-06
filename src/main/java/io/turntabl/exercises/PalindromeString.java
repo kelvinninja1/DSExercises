@@ -1,5 +1,8 @@
 package src.main.java.io.turntabl.exercises;
 
+// Problem:
+// Write a function that tests whether a string is a palindrome.
+
 public class PalindromeString {
 
     public static void main (String arg[]) {

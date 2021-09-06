@@ -1,5 +1,8 @@
 package src.main.java.io.turntabl.exercises;
 
+// Problems:
+// Write a function that concatenates two lists. [a,b,c], [1,2,3] → [a,b,c,1,2,3]
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -20,15 +23,15 @@ public class ConcatenateTwoLists {
     }
 
     public static List<String> concatenate(List<String> firstList, List<String> secondList) {
-        int c1 = 0, c2 = 0;
+        int firstListCounter = 0, secondListCounter = 0;
         List<String> resList = new ArrayList<String>();
 
-        while(c1 < firstList.size()) {
-            resList.add((String) firstList.get(c1++));
+        while(firstListCounter < firstList.size()) {
+            resList.add((String) firstList.get(firstListCounter++));
         }
 
-        while(c2 < firstList.size()) {
-            resList.add((String) secondList.get(c2++));
+        while(secondListCounter < firstList.size()) {
+            resList.add((String) secondList.get(secondListCounter++));
         }
         return resList;
     }

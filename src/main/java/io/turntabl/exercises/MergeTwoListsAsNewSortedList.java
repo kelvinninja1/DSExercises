@@ -1,5 +1,8 @@
 package src.main.java.io.turntabl.exercises;
 
+// Problem:
+// Write a function that merges two sorted lists into a new sorted list. [1,4,6],[2,3,5] → [1,2,3,4,5,6]. You can do this quicker than concatenating them followed by a sort.
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -18,27 +21,27 @@ public class MergeTwoListsAsNewSortedList {
     }
 
     public static List<Integer> merge(List<Integer> firstList, List<Integer> secondList) {
-        int c1 = 0, c2 = 0;
+        int firstListCounter = 0, secondListCounter = 0;
         List<Integer> resList = new ArrayList<Integer>();
 
-        while(c1 < firstList.size() || c2 < firstList.size()) {
-           if(c1 < firstList.size()) {
-               if (c2 < secondList.size()) {
-                   if(firstList.get(c1) <= secondList.get(c2)) {
-                        resList.add((Integer) firstList.get(c1++));
+        while(firstListCounter < firstList.size() || secondListCounter < firstList.size()) {
+           if(firstListCounter < firstList.size()) {
+               if (secondListCounter < secondList.size()) {
+                   if(firstList.get(firstListCounter) <= secondList.get(secondListCounter)) {
+                        resList.add((Integer) firstList.get(firstListCounter++));
                     }
                } else {
-                   resList.add((Integer) firstList.get(c1++));
+                   resList.add((Integer) firstList.get(firstListCounter++));
                }
             }
 
-            if(c2 < secondList.size()) {
-                if (c1 < firstList.size()) {
-                    if(secondList.get(c2) <= firstList.get(c1) ) {
-                        resList.add((Integer) secondList.get(c2++));
+            if(secondListCounter < secondList.size()) {
+                if (firstListCounter < firstList.size()) {
+                    if(secondList.get(secondListCounter) <= firstList.get(firstListCounter) ) {
+                        resList.add((Integer) secondList.get(secondListCounter++));
                     }
                 } else {
-                    resList.add((Integer) secondList.get(c2++));
+                    resList.add((Integer) secondList.get(secondListCounter++));
                 }
             }
         }

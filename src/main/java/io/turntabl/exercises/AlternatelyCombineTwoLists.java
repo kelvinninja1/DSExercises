@@ -1,5 +1,8 @@
 package src.main.java.io.turntabl.exercises;
 
+// Problem:
+// Write a function that combines two lists by alternatingly taking elements, e.g. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -20,16 +23,16 @@ public class AlternatelyCombineTwoLists {
     }
 
     public static List<String> concatenate(List<String> firstList, List<String> secondList) {
-        int c1 = 0, c2 = 0;
+        int firstListCounter = 0, secondListCounter = 0;
         List<String> resList = new ArrayList<String>();
 
-        while(c1 < firstList.size() || c2 < firstList.size()) {
-           if(c1 < firstList.size()) {
-                resList.add((String) firstList.get(c1++));
+        while(firstListCounter < firstList.size() || secondListCounter < firstList.size()) {
+           if(firstListCounter < firstList.size()) {
+                resList.add((String) firstList.get(firstListCounter++));
             }
 
-            if(c2 < firstList.size()) {
-                resList.add((String) secondList.get(c2++));
+            if(secondListCounter < firstList.size()) {
+                resList.add((String) secondList.get(secondListCounter++));
             }
         }
         return resList;
