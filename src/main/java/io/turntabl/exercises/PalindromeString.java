@@ -15,8 +15,9 @@ public class PalindromeString {
     public static Boolean isPalindrome(String testString) {
         int testLength = testString.length();
         Boolean isPalindrome = true;
+        testString = testString.toLowerCase();
 
-        for(int i = 0; i < testLength; i++){
+        for(int i = 0; i < testLength/2; i++){
             if (testString.charAt(i) != testString.charAt((testLength - 1) - i)) {
                 isPalindrome = false;
                  break;
