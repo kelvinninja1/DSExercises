@@ -5,6 +5,13 @@
   "configurations": [
     {
         "type": "java",
+        "name": "CodeLens (Launch) - ConcatenateTwoLists",
+        "request": "launch",
+        "mainClass": "src.main.java.io.turntabl.exercises.ConcatenateTwoLists",
+        "projectName": "DSExercises_6f3ef26f"
+    },
+    {
+        "type": "java",
         "name": "CodeLens (Launch) - PalindromeStringTest",
         "request": "launch",
         "mainClass": "src.test.java.io.turntabl.exercises.PalindromeStringTest",
