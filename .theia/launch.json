@@ -5,6 +5,27 @@
   "configurations": [
     {
         "type": "java",
+        "name": "CodeLens (Launch) - MergeTwoListsAsNewSortedListTest",
+        "request": "launch",
+        "mainClass": "src.test.java.io.turntabl.exercises.MergeTwoListsAsNewSortedListTest",
+        "projectName": "DSExercises_6f3ef26f"
+    },
+    {
+        "type": "java",
+        "name": "CodeLens (Launch) - AlternatelyCombineTwoListsTest",
+        "request": "launch",
+        "mainClass": "src.test.java.io.turntabl.exercises.AlternatelyCombineTwoListsTest",
+        "projectName": "DSExercises_6f3ef26f"
+    },
+    {
+        "type": "java",
+        "name": "CodeLens (Launch) - ConcatenateTwoListsTest",
+        "request": "launch",
+        "mainClass": "src.test.java.io.turntabl.exercises.ConcatenateTwoListsTest",
+        "projectName": "DSExercises_6f3ef26f"
+    },
+    {
+        "type": "java",
         "name": "CodeLens (Launch) - MergeTwoListsAsNewSortedList",
         "request": "launch",
         "mainClass": "src.main.java.io.turntabl.exercises.MergeTwoListsAsNewSortedList",

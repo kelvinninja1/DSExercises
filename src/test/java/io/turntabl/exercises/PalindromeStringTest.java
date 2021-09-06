@@ -9,7 +9,7 @@ public class PalindromeStringTest {
 
     public static void main (String arg[]) {
 
-        String example = "racecar";
+        String example = "Racecar";
         String example2 = "omo";
         String example3 = "test";
         String example4 = "xenannanex";
