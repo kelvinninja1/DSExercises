@@ -1,5 +1,7 @@
 package DSunit;
- 
+
+import java.util.List;
+
 public class DS
 {
     public static final String ANSI_RESET = "\u001B[0m";
@@ -63,15 +65,22 @@ public class DS
         }
 
     }
+
+    public static int assertEquals(List<String> actual, List<String> expected, String message) {
+        if (actual.equals(expected)){
+            testPassed(message + ", Expected: " + expected + " Actual: " + actual);
+            return 1;
+        } else {
+            testFailed(message + ", Expected: " + expected + " Actual: " + actual);
+            return 0;
+        }
+	}
     
 
     public static void doc ()
     {
         System.out.println("DSunit - DataStructures Unit testing Docs");
     }
-
-	public static void assertEquals(Boolean palindrome, int expected, String message) {
-	}
 
 
 }
