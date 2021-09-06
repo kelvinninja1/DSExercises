@@ -17,12 +17,12 @@ public class AlternatelyCombineTwoLists {
         List<String> secondList = new ArrayList<String>();
         secondList.addAll(Arrays.asList("1", "2", "3"));
         
-        System.out.println(concatenate(firstList, secondList));
+        System.out.println(combine(firstList, secondList));
 
         
     }
 
-    public static List<String> concatenate(List<String> firstList, List<String> secondList) {
+    public static List<String> combine(List<String> firstList, List<String> secondList) {
         int firstListCounter = 0, secondListCounter = 0;
         List<String> resList = new ArrayList<String>();
 
