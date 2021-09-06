@@ -66,7 +66,7 @@ public class DS
 
     }
 
-    public static int assertEquals(List<String> actual, List<String> expected, String message) {
+    public static int assertEquals(List actual, List expected, String message) {
         if (actual.equals(expected)){
             testPassed(message + ", Expected: " + expected + " Actual: " + actual);
             return 1;
@@ -76,12 +76,20 @@ public class DS
         }
 	}
     
+    // public static int assertEquals(List<Integer> actual, List<Integer> expected, String message) {
+    //     if (actual.equals(expected)){
+    //         testPassed(message + ", Expected: " + expected + " Actual: " + actual);
+    //         return 1;
+    //     } else {
+    //         testFailed(message + ", Expected: " + expected + " Actual: " + actual);
+    //         return 0;
+    //     }
+	// }
 
     public static void doc ()
     {
         System.out.println("DSunit - DataStructures Unit testing Docs");
     }
-
 
 }
  
