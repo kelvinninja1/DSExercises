@@ -22,15 +22,10 @@ public class ConcatenateTwoLists {
     }
 
     public static List<String> concatenate(List<String> firstList, List<String> secondList) {
-        
-        List<String> resList = new ArrayList<String>();
 
-        for (int firstListCounter = 0; firstListCounter < firstList.size();) {
-            resList.add((String) firstList.get(firstListCounter++));
-        }
-        for (int secondListCounter = 0; secondListCounter < secondList.size();) {
-            resList.add((String) secondList.get(secondListCounter++));
-        }
+        List<String> resList = new ArrayList<String>(firstList.size() + secondList.size());
+        resList.addAll(firstList);
+        resList.addAll(secondList);
         return resList;
     }
 
