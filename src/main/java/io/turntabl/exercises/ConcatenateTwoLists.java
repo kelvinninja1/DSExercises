@@ -17,20 +17,18 @@ public class ConcatenateTwoLists {
         List<String> secondList = new ArrayList<String>();
         secondList.addAll(Arrays.asList("1", "2", "3"));
         
-        System.out.println(concatenate(firstList, secondList));
+        System.out.println(concatenate(firstList, secondList)); 
 
-        
     }
 
     public static List<String> concatenate(List<String> firstList, List<String> secondList) {
-        int firstListCounter = 0, secondListCounter = 0;
+        
         List<String> resList = new ArrayList<String>();
 
-        while(firstListCounter < firstList.size()) {
+        for (int firstListCounter = 0; firstListCounter < firstList.size();) {
             resList.add((String) firstList.get(firstListCounter++));
         }
-
-        while(secondListCounter < firstList.size()) {
+        for (int secondListCounter = 0; secondListCounter < secondList.size();) {
             resList.add((String) secondList.get(secondListCounter++));
         }
         return resList;

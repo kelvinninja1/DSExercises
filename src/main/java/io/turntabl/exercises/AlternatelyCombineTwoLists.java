@@ -23,18 +23,13 @@ public class AlternatelyCombineTwoLists {
     }
 
     public static List<String> combine(List<String> firstList, List<String> secondList) {
-        int firstListCounter = 0, secondListCounter = 0;
         List<String> resList = new ArrayList<String>();
 
-        while(firstListCounter < firstList.size() || secondListCounter < firstList.size()) {
-           if(firstListCounter < firstList.size()) {
-                resList.add((String) firstList.get(firstListCounter++));
-            }
-
-            if(secondListCounter < firstList.size()) {
-                resList.add((String) secondList.get(secondListCounter++));
-            }
+        for (int firstListCounter = 0, secondListCounter = 0; firstListCounter < firstList.size() || secondListCounter < secondList.size();) {
+            if (firstListCounter < firstList.size()) { resList.add((String) firstList.get(firstListCounter++)); }
+            if (secondListCounter < secondList.size()) { resList.add((String) secondList.get(secondListCounter++)); }
         }
+
         return resList;
     }
 
