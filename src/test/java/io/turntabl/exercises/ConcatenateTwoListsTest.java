@@ -29,10 +29,16 @@ public class ConcatenateTwoListsTest {
         firstListExample3.addAll(Arrays.asList("T", "U", "R", "N"));
         secondListExample3.addAll(Arrays.asList("T", "A", "B", "L", "E"));
         resultExample3.addAll(Arrays.asList("T", "U", "R", "N", "T", "A", "B", "L", "E"));
+
+        List<Integer> firstListExample4 = new ArrayList<Integer>(),  secondListExample4 = new ArrayList<Integer>(),  resultExample4 = new ArrayList<Integer>();
+        firstListExample4.addAll(Arrays.asList(1, 2, 3));
+        secondListExample4.addAll(Arrays.asList(4, 5, 6));
+        resultExample4.addAll(Arrays.asList(1, 2, 3, 4, 5, 6));
         
         DS.assertEquals(ConcatenateTwoLists.concatenate(firstListExample1, secondListExample1), resultExample1, " Concatenating " + firstListExample1 + " and " + secondListExample1);    
         DS.assertEquals(ConcatenateTwoLists.concatenate(firstListExample2, secondListExample2), resultExample2, " Concatenating " + firstListExample2 + " and " + secondListExample2);
         DS.assertEquals(ConcatenateTwoLists.concatenate(firstListExample3, secondListExample3), resultExample3, " Concatenating " + firstListExample3 + " and " + secondListExample3);
+        DS.assertEquals(ConcatenateTwoLists.concatenate(firstListExample4, secondListExample4), resultExample4, " Concatenating " + firstListExample4 + " and " + secondListExample4);
         
     }
 }

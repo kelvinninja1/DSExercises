@@ -21,9 +21,9 @@ public class ConcatenateTwoLists {
 
     }
 
-    public static List<String> concatenate(List<String> firstList, List<String> secondList) {
+    public static <T> List<T> concatenate(List<T> firstList, List<T> secondList) {
 
-        List<String> resList = new ArrayList<String>(firstList.size() + secondList.size());
+        List<T> resList = new ArrayList<T>(firstList.size() + secondList.size());
         resList.addAll(firstList);
         resList.addAll(secondList);
         return resList;
