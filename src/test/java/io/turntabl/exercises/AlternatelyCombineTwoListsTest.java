@@ -29,10 +29,17 @@ public class AlternatelyCombineTwoListsTest {
         firstListExample3.addAll(Arrays.asList("T", "U", "R", "N"));
         secondListExample3.addAll(Arrays.asList("T", "A", "B", "L", "E"));
         resultExample3.addAll(Arrays.asList("T", "T", "U", "A", "R", "B", "N", "L", "E"));
+
+        List<String> firstListExample4 = new ArrayList<String>(),  secondListExample4 = new ArrayList<String>(),  resultExample4 = new ArrayList<String>();
+        firstListExample4.addAll(Arrays.asList("a", "b", "c", "d", "e", "f"));
+        secondListExample4.addAll(Arrays.asList("1", "2", "3"));
+        resultExample4.addAll(Arrays.asList("a", "1", "b", "2", "c", "3", "d", "e", "f"));
         
         DS.assertEquals(AlternatelyCombineTwoLists.combine(firstListExample1, secondListExample1), resultExample1, " Alternatively Combine " + firstListExample1 + " and " + secondListExample1);
         DS.assertEquals(AlternatelyCombineTwoLists.combine(firstListExample2, secondListExample2), resultExample2, " Alternatively Combine " + firstListExample2 + " and " + secondListExample2);
         DS.assertEquals(AlternatelyCombineTwoLists.combine(firstListExample3, secondListExample3), resultExample3, " Alternatively Combine " + firstListExample3 + " and " + secondListExample3);
+        DS.assertEquals(AlternatelyCombineTwoLists.combine(firstListExample4, secondListExample4), resultExample4, " Alternatively Combine " + firstListExample4 + " and " + secondListExample4);
+
 
     }
 
